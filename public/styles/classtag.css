@@ -1,0 +1,736 @@
+:root {
+    --corner-size: 5px;
+    --corner-color: rgb(195, 195, 195);
+    --corner-color: var(--white);
+    --black: #1b1b1b;
+    --white: #e3e3e3;
+    --red: #e9204f;
+    --green: #4ecc2e;
+    --mobile-p-text: 16px;
+    --mobile-s-text: 12px;
+    --corner-size2: 10px;
+    --corner-bg2: var(--white);
+    --corner-bg3: var(--red);
+    --corner-bg3: var(--white);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fade-down {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+}
+
+.primary-text {
+    font-family: sans-serif;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+    text-wrap: nowrap;
+}
+
+.mobile-p-text {
+    font-family: sans-serif;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    text-wrap: nowrap;
+}
+
+.secondary-text {
+    font-family: sans-serif;
+    color: var(--white);
+    font-size: 16px;
+    text-wrap: nowrap;
+    opacity: .75;
+}
+
+.mobile-s-text {
+    font-family: sans-serif;
+    color: var(--white);
+    font-size: 12px;
+    text-wrap: nowrap;
+    opacity: .75;
+}
+
+.green {
+    color: var(--green);
+}
+.red {
+    color: var(--red);
+}
+.black {
+    color: var(--black);
+    color: black;
+}
+.bold {
+    font-weight: bold;
+}
+
+.full-opacity {
+    opacity: 1;
+}
+.half-opacity {
+    opacity: .75;
+}
+
+.bg-red {
+    background-color: var(--red);
+}
+.bg-green {
+    background-color: var(--green);
+}
+
+.border-red {
+    border-color: var(--red);
+}
+.border-green {
+    border-color: var(--green);
+}
+
+
+.top-left-corner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+
+    width: var(--corner-size);
+    height: var(--corner-size);
+    border-radius: 50%;
+
+    background-color: var(--corner-color);
+}
+
+.top-right-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+
+    width: var(--corner-size);
+    height: var(--corner-size);
+    border-radius: 50%;
+
+    background-color: var(--corner-color);
+}
+
+.bottom-left-corner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+
+    width: var(--corner-size);
+    height: var(--corner-size);
+    border-radius: 50%;
+
+    background-color: var(--corner-color);
+}
+
+.bottom-right-corner {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+
+    width: var(--corner-size);
+    height: var(--corner-size);
+    border-radius: 50%;
+
+    background-color: var(--corner-color);
+}
+
+.block {
+    height: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: gray;
+    background-color: var(--white);
+    /* background-color: var(--red); */
+    color: black;
+    /* color: var(--white); */
+}
+
+.top-left-corner2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+
+    width: var(--corner-size2);
+    height: var(--corner-size2);
+
+    border-left: 1px solid var(--corner-bg2);
+    border-top: 1px solid var(--corner-bg2);
+}
+
+.top-right-corner2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+
+    width: var(--corner-size2);
+    height: var(--corner-size2);
+
+    border-right: 1px solid var(--corner-bg2);
+    border-top: 1px solid var(--corner-bg2);
+}
+
+.bottom-left-corner2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+
+    width: var(--corner-size2);
+    height: var(--corner-size2);
+
+    border-left: 1px solid var(--corner-bg2);
+    border-bottom: 1px solid var(--corner-bg2);
+}
+
+.bottom-right-corner2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+
+    width: var(--corner-size2);
+    height: var(--corner-size2);
+
+    border-right: 1px solid var(--corner-bg2);
+    border-bottom: 1px solid var(--corner-bg2);
+}
+
+
+
+.top-left-corner3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: var(--corner-size2);
+    height: var(--corner-size2);
+
+    border-left: 1px solid var(--corner-bg3);
+    border-top: 1px solid var(--corner-bg3);
+}
+
+.top-right-corner3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: var(--corner-size2);
+    height: var(--corner-size2);
+
+    border-right: 1px solid var(--corner-bg3);
+    border-top: 1px solid var(--corner-bg3);
+}
+
+.bottom-left-corner3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: var(--corner-size2);
+    height: var(--corner-size2);
+
+    border-left: 1px solid var(--corner-bg3);
+    border-bottom: 1px solid var(--corner-bg3);
+}
+
+.bottom-right-corner3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: var(--corner-size2);
+    height: var(--corner-size2);
+
+    border-right: 1px solid var(--corner-bg3);
+    border-bottom: 1px solid var(--corner-bg3);
+}
+
+
+
+#main {
+    padding-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 5px;
+    padding-top: 20px;
+
+    overflow: auto;
+}
+
+html, body {
+    overflow: auto;
+}
+
+.room {
+    position: relative;
+    width: 100%;
+    height: 75px;
+    /* height: auto; */
+    overflow: hidden;
+    /* overflow: auto; */
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+
+    transition: height .2s ease-in-out;
+}
+
+.room-accent {
+    width: 5px;
+    height: 100%;
+    flex-shrink: 0;
+
+    background-color: var(--red);
+    box-shadow: 0 0 30px var(--red);
+}
+
+.room-header-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.room-header {
+    position: relative;
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    transition: background-color .1s ease-in-out;
+}
+.room-header:hover {
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+.room-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+
+    background-color: rgba(116, 86, 93, 0.1);
+    transition: width .2s ease-in-out;
+
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+.room-header:hover {
+    .room-active {
+        width: 100%;
+    }
+}
+
+.room-header-sector {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    border-right: 1px solid rgb(126, 36, 36);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-online {
+    background-color: var(--green);
+    width: min-content;
+    height: min-content;
+    color: black;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 12px;
+}
+.header-online, #room-name, #teacher-name, #time{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.room-number {
+    position: absolute;
+    right: 10px;
+    font-size: calc(var(--mobile-p-text) + var(--mobile-s-text));
+    color: var(--red);
+    opacity: .5;
+}
+
+.sector-tag {
+    position: absolute;
+    top: 5px;
+    align-self: center;
+
+    font-size: 10px;
+    color: var(--red);
+    color: var(--white);
+    opacity: .5;
+}
+
+
+
+
+.room-content {
+    position: relative;
+
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-rows: 300px;
+}
+
+
+
+.room-details-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    gap: 10px;
+}
+
+.room-details-header {
+    position: relative;
+    width: 100%;
+    height: min-content;
+    
+    display: flex;
+    gap: 10px;
+}
+
+.room-details-sector {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    height: min-content;
+
+    border-bottom: 1px solid var(--white);
+    /* border: 1px solid var(--white); */
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 12px;
+    color: var(--white);
+
+    opacity: .75;
+    opacity: .9;
+}
+
+.block-label-wrapper {
+    position: relative;
+    width: 100%;
+    height:min-content;
+
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+    border-bottom: 1px solid var(--white);
+}
+.block-label-wrapper p:nth-of-type(1) {
+    height: min-content;
+    width: min-content;
+    background-color: var(--white);
+    color: var(--black);
+    text-wrap: nowrap;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.block-label-wrapper p:nth-of-type(2) {
+    color: var(--white);
+}
+
+
+
+.room-image-wrapper {
+    /* border: 1px solid gray; */
+    position: relative;
+    width: 100%;
+    /* height: 100%; */
+    flex: 1;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.image-wrapper {
+    border: 1px solid var(--white);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .75;
+}
+
+.room-image-grid {
+    /* border: 1px solid var(--white); */
+    position:absolute;
+    z-index: 10;
+
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 5px;
+}
+.room-image-grid-sector {
+    z-index: 10;
+    border: 1px solid var(--white);
+    opacity: .2;
+}   
+
+.room-details-footer {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+.bold {
+    font-weight: bold;
+}
+
+
+
+
+
+.teacher-details-container {
+    position: relative;
+    width: auto;
+    height: auto;
+    height: min-content;
+    height: 100%;
+    
+    border-right: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+}
+
+.teacher-details-1d {
+    position: relative;
+    width: 100%;
+    height: min-content;
+    border-bottom: 1px solid var(--white);
+
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.teacher-id-block {
+    position: relative;
+    width: min-content;
+    height: min-content;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    background-color: var(--white);
+    color: black;
+    opacity: .9;
+}
+
+.teacher-details-2d {
+    position: relative;
+    width: 100%;
+    height: 110px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.teacher-image-wrapper {
+    position: relative;
+    height: 100%;
+    aspect-ratio: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.teacher-image-wrapper img {
+    border: 1px solid var(--white);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.teacher-info-wrapper {
+    /* border: 1px solid var(--white); */
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.teacher-info {
+    height: 100%;
+    border-left: 5px solid var(--red);
+    padding-left: 10px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(116, 86, 93, 0.1);
+}
+
+.teacher-details-3d {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    height: minmax(80px, 100%);
+    height: 100px;
+    height: 100%;
+
+    background-color: rgba(116, 86, 93, 0.1);
+    border-left: 5px solid var(--red);
+}
+
+.console-header {
+    position: relative;
+    width: 100%;
+    height: 15px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-left: 5px;
+    padding-right: 5px;
+    gap: 10px;
+
+    background-color: rgb(233, 32, 79, .1);
+    background-color: rgb(255, 255, 255, .1);
+
+    color: var(--white);
+    font-size: 12px;
+}
+
+.red-text-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+
+    background-color: rgba(116, 86, 93, 0.1);
+    border-left: 5px solid var(--red);
+    padding-left: 10px;
+    padding-right: 10px;
+
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+}
+.red-text-box .top-right-corner3 {
+    border-top: 1px solid var(--red);
+    border-right: 1px solid var(--red);
+}
+.red-text-box .bottom-right-corner3 {
+    border-bottom: 1px solid var(--red);
+    border-right: 1px solid var(--red);
+}
+
+.console-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    color: var(--red);
+    text-wrap: wrap;
+    overflow: auto;
+}

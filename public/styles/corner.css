@@ -1,0 +1,61 @@
+:root {
+    --v1-size: 13px;
+    --v1-thickness: 2px;
+    --v1-color: var(--red, red);
+    --v1-expand-px: 5px;
+}
+
+[class*="-corner-v1"] {
+    position: absolute;
+    width: var(--v1-size);
+    height: var(--v1-size);
+    border-color: var(--v1-color);
+    border-style: solid;
+
+    transition: transform 0.25s ease-out; 
+    pointer-events: none;
+}
+
+.tl-corner-v1 {
+    top: calc(var(--v1-thickness) * -1);
+    left: calc(var(--v1-thickness) * -1);
+    border-width: var(--v1-thickness) 0 0 var(--v1-thickness);
+}
+
+.tr-corner-v1 {
+    top: calc(var(--v1-thickness) * -1);
+    right: calc(var(--v1-thickness) * -1);
+    border-width: var(--v1-thickness) var(--v1-thickness) 0 0;
+}
+
+.bl-corner-v1 {
+    bottom: calc(var(--v1-thickness) * -1);
+    left: calc(var(--v1-thickness) * -1);
+    border-width: 0 0 var(--v1-thickness) var(--v1-thickness);
+}
+
+.br-corner-v1 {
+    bottom: calc(var(--v1-thickness) * -1);
+    right: calc(var(--v1-thickness) * -1);
+    border-width: 0 var(--v1-thickness) var(--v1-thickness) 0;
+}
+
+.input-wrapper:focus-within > .tl-corner-v1,
+.input-wrapper:has(input:not(:placeholder-shown)) .tl-corner-v1 {
+    transform: translate(calc(var(--v1-expand-px) * -1), calc(var(--v1-expand-px) * -1));
+}
+
+.input-wrapper:focus-within > .tr-corner-v1,
+.input-wrapper:has(input:not(:placeholder-shown)) .tr-corner-v1 {
+    transform: translate(var(--v1-expand-px), calc(var(--v1-expand-px) * -1));
+}
+
+.input-wrapper:focus-within > .bl-corner-v1,
+.input-wrapper:has(input:not(:placeholder-shown)) .bl-corner-v1 {
+    transform: translate(calc(var(--v1-expand-px) * -1), var(--v1-expand-px));
+}
+
+.input-wrapper:focus-within > .br-corner-v1,
+.input-wrapper:has(input:not(:placeholder-shown)) .br-corner-v1 {
+    transform: translate(var(--v1-expand-px), var(--v1-expand-px));
+}

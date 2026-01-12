@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGITS - LOGIN</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./dest/login.css">
+</head>
+<body>
+    <div class="dotted-bg"></div>
+    
+    <div id="main">
+
+        <div class="welcome-back-section">
+            <div>
+                <p>Welcome back</p>
+                <div class="tr-corner-v1"></div>
+                <div class="bl-corner-v1"></div>
+            </div>
+            <p>Please enter your details</p>
+        </div>
+        
+        <form id="login-form">
+            <div class="action-text">
+                <p>LOGIN</p>
+                <div class="br-corner-v1"></div>
+            </div>
+
+            <div id="email-wrapper" class="input-wrapper">
+                <label for="email-input">
+                    <p>INPUT</p>
+                    <p>EMAIL</p>
+                </label>
+                <input type="email" id="email-input" name="email" placeholder="Enter email" required>
+                <div class="tl-corner-v1"></div>
+                <div class="tr-corner-v1"></div>
+                <div class="bl-corner-v1"></div>
+                <div class="br-corner-v1"></div>
+            </div>
+
+            <div id="password-wrapper" class="input-wrapper">
+                <label for="password-input">
+                    <p>INPUT</p>
+                    <p>PASSWORD</p>
+                </label>
+                <input type="password" id="password-input" name="password" placeholder="Enter password" required>
+                <div class="tl-corner-v1"></div>
+                <div class="tr-corner-v1"></div>
+                <div class="bl-corner-v1"></div>
+                <div class="br-corner-v1"></div>
+            </div>
+
+            <p id="error-popup">INVALID EMAIL OR PASSWORD</p>
+
+            <div id="login-submit-container" class="submit-wrapper">
+                <div id="login-bar" class="button-progress-bar">
+                    <button id="login-submit-btn" type="submit">LOGIN</button>
+                </div>
+
+                <div id="progress-bar-wrapper">
+                    <div id="email-bar" class="item-progress-bar"></div>
+                    <div id="password-bar" class="item-progress-bar"></div>
+                </div>
+            </div>
+
+        </form>
+
+        <div class="signup-section">
+            <p>Don't have an account?</p>
+            <div>
+                <p><a href="/signup">Sign Up</a></p>
+                <div class="tr-corner-v1"></div>
+            </div>
+        </div>
+    
+    </div>
+
+    <!-- <script type="module" src="./scripts/login.js"></script> -->
+    <script type="module" src="./scripts/login3.js"></script>
+</body>
+</html>

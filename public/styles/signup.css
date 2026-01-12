@@ -1,0 +1,353 @@
+@import url(./general.css);
+@import url(./inputElement.css);
+@import url(./corner.css);
+@import url(./submitElement.css);
+@import url(./animation.css);
+
+:root {
+    --opening-duration: 0.5s;
+}
+
+.calling-text {
+    opacity: 0; 
+    animation: fade-up-reveal var(--opening-duration) ease-out forwards; 
+}
+.action-text {
+    opacity: 0; 
+    animation: fade-up-reveal var(--opening-duration) ease-out forwards; 
+    animation-delay: .1s; 
+}
+#username-wrapper {
+    opacity: 0;
+    animation: fade-up-reveal var(--opening-duration) ease-out forwards;
+    animation-delay: .2s;
+}
+#email-wrapper {
+    opacity: 0;
+    animation: fade-up-reveal var(--opening-duration) ease-out forwards;
+    animation-delay: .3s;
+}
+#password-wrapper {
+    opacity: 0;
+    animation: fade-up-reveal var(--opening-duration) ease-out forwards;
+    animation-delay: .4s;
+}
+#confirm-password-wrapper {
+    opacity: 0;
+    animation: fade-up-reveal var(--opening-duration) ease-out forwards;
+    animation-delay: .5s;
+}
+#submit-wrapper {
+    opacity: 0;
+    animation: fade-up-reveal var(--opening-duration) ease-out forwards;
+    animation-delay: .6s;
+}
+.login-section {
+    opacity: 0;
+    animation: fade-up-reveal var(--opening-duration) ease-out forwards;
+    animation-delay: .7s;
+}
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+}
+
+#main {
+    width: 80%;
+    max-width: 500px;
+
+    /* align-items: start; */
+    justify-content: space-evenly;
+
+
+}
+
+
+
+form {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.calling-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--black);
+    text-wrap: nowrap;
+    line-height: 1;
+
+}
+.calling-text > div {
+    position: relative;
+    background: var(--white);
+}
+.calling-text div > p:nth-of-type(1) {
+    font-size: 36px;
+    font-weight: 600;
+}
+.calling-text > p:nth-of-type(1) {
+    font-size: 18px;
+    font-weight: 400;
+    opacity: .75;
+    color: var(--black);
+    background: var(--white);
+}
+.calling-text .tr-corner-v1 {
+    position: absolute;
+    top: -4px;
+    right: -7px;
+}
+.calling-text .bl-corner-v1 {
+    position: absolute;
+    bottom: -4px;
+    left: -7px;
+}
+
+
+
+.action-text {
+    height: 24px;
+    color: var(--red);
+    border-left: 5px solid var(--red);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    text-wrap: nowrap;
+    background: var(--white);
+}
+.action-text > .tr-corner-v1 {
+    border-color: var(--red);
+    right: -5px;
+}
+
+
+
+.input-wrapper > input { 
+    color: var(--black); 
+    /* backdrop-filter: blur(4px); */
+    opacity: 1;
+}
+.input-wrapper > input::placeholder { color: var(--black); }
+
+
+
+
+
+.login-section {
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    color: var(--black);
+    text-wrap: nowrap;
+    line-height: 1;
+}
+.login-section > p:nth-of-type(1) {
+    font-size: var(--mobile-p-text);
+}
+.login-section > div {
+    position: relative;
+}
+
+.login-section a {
+    text-decoration: none;
+    color: var(--red);
+}
+.login-section > div > p:nth-of-type(1) {
+    /* font-size: calc(var(--mobile-s-text) + 5px); */
+    font-size: calc(var(--mobile-p-text) + 4px);
+    font-weight: 600;
+    color: var(--red);
+}
+
+.login-section > div:hover .br-corner-v1 {
+    bottom: -4px;
+    right: -6px;
+}
+.login-section > div > .br-corner-v1 {
+    right: -4px;
+}
+
+
+
+:root {
+    --dotted-bg: var(--black);    
+    /* --dotted-bg-size: 1.5px; */
+    --dotted-bg-opacity: 1;
+
+    --header-bg: var(--header-bg-light);
+    --input-bg: var(--input-bg-light);
+
+    --v1-thickness: 3px;
+}
+
+
+
+#successful-wrapper {
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    height: 0;
+    background: var(--red);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 10px;
+    visibility: hidden;
+}
+
+/* --- Status Bar Styles --- */
+.status-bar {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    text-wrap: nowrap;
+    line-height: 1;
+    font-size: 21px;
+    border-left: 5px solid var(--white);
+    padding-left: 5px;
+}
+
+.label-tag {
+    padding: 5px;
+    background: var(--white);
+    color: var(--red);
+}
+
+.status-msg {
+    width: 100%; height: 100%;
+    border: 1px solid var(--white);
+    display: flex; 
+    align-items: center;
+    padding-left: 5px;
+}
+
+.arrow-icon {
+    position: absolute;
+    height: 60%;
+    aspect-ratio: 1;
+    right: 5px;
+    rotate: -90deg;
+    fill: var(--white);
+}
+
+/* --- Welcome Card Styles --- */
+.welcome-card {
+    width: 100%;
+    max-width: 500px;
+    height: min-content;
+    display: flex;
+    padding: 5px;
+    gap: 5px;
+    background-color: var(--white);
+}
+
+.brand-id {
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--red);
+    line-height: 0.9;
+}
+
+.welcome-msg {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--red);
+    line-height: 1;
+    text-wrap: nowrap;
+}
+
+.user-section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#username {
+    flex: 1;
+    width: 100%;
+    border-left: 5px solid var(--red);
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-wrap: nowrap;
+    font-size: 24px;
+}
+
+/* --- Corner Positioning --- */
+.user-section > .tl-corner-v1 { top: 0px; left: 10px; position: absolute; }
+.user-section > .tr-corner-v1 { top: 0px; right: 0px; position: absolute; }
+.user-section >.bl-corner-v1 { bottom: 0px; left: 10px; position: absolute; }
+.user-section > .br-corner-v1 { right: 0px; bottom: 0px; position: absolute; }
+
+
+
+#login-button {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 50px;
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--white);
+    border: none;
+
+    cursor: pointer;
+
+    font-size: var(--mobile-p-text);
+    color: var(--red);
+    font-weight: 600;
+    text-decoration: none;
+}
+#login-button:active {
+    opacity: .5;
+}
+
+#login-button > div {
+    position: relative;
+    line-height: 1;
+}
+#login-button > div > .br-corner-v1 {
+    right: -4px;
+    bottom: -1px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    width: 10px; height: 10px;
+}
+
+.status-bar, .welcome-card, #login-button {
+    opacity: 0;
+}

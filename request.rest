@@ -1,0 +1,34 @@
+POST http://localhost:6000/auth/signup
+Content-Type: application/json
+
+{
+    "username": "testing1",
+    "email": "testing1@example.com",
+    "password": "testing"
+}
+
+###
+
+POST http://localhost:6000/auth/login
+Content-Type: application/json
+
+{
+    "email": "testing1@example.com",
+    "password": "testing1"
+}
+
+###
+
+GET http://localhost:6000/user
+
+###
+
+POST http://localhost:6000/auth/refresh
+
+###
+
+POST http://localhost:6000/auth/refresh/logout
+
+### 
+
+GET https://dgits.online/user

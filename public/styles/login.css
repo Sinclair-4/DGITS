@@ -1,0 +1,146 @@
+@import url(./general.css);
+@import url(./inputElement.css);
+@import url(./corner.css);
+@import url(./submitElement.css);
+@import url(./animation.css);
+
+.welcome-back-section {
+    opacity: 0;
+    animation: fade-up-reveal .5s ease-out forwards;
+}
+.action-text {
+    opacity: 0;
+    animation: fade-up-reveal .5s ease-out forwards;
+    animation-delay: .1s;
+}
+#email-wrapper {
+    opacity: 0;
+    animation: fade-up-reveal .5s ease-out forwards;
+    animation-delay: .2s;
+}
+#password-wrapper {
+    opacity: 0;
+    animation: fade-up-reveal .5s ease-out forwards;
+    animation-delay: .3s;
+}
+.submit-wrapper {
+    opacity: 0;
+    animation: fade-up-reveal .5s ease-out forwards;
+    animation-delay: .4s;
+}
+.signup-section {
+    opacity: 0;
+    animation: fade-up-reveal .5s ease-out forwards;
+    animation-delay: .5s;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main {
+    width: 80%;
+    max-width: 500px;
+
+    /* align-items: start; */
+    justify-content: space-evenly;
+
+
+}
+
+form {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.welcome-back-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--white);
+    text-wrap: nowrap;
+    line-height: 1;
+}
+.welcome-back-section > div {
+    position: relative;
+}
+.welcome-back-section div > p:nth-of-type(1) {
+    font-size: 36px;
+    font-weight: 600;
+}
+.welcome-back-section > p:nth-of-type(1) {
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 1;
+    color: var(--off-white);
+}
+.welcome-back-section .tr-corner-v1 {
+    position: absolute;
+    top: -4px;
+    right: -7px;
+}
+.welcome-back-section .bl-corner-v1 {
+    position: absolute;
+    bottom: -4px;
+    left: -7px;
+}
+
+
+
+.signup-section {
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    color: var(--white);
+    text-wrap: nowrap;
+    line-height: 1;
+}
+.signup-section > p:nth-of-type(1) {
+    font-size: var(--mobile-p-text);
+}
+.signup-section > div {
+    position: relative;
+}
+.signup-section > div:hover .tr-corner-v1 {
+    top: -2px;
+    right: -7px;
+}
+.signup-section a {
+    text-decoration: none;
+    color: var(--red);
+}
+.signup-section > div > p:nth-of-type(1) {
+    /* font-size: calc(var(--mobile-s-text) + 5px); */
+    font-size: calc(var(--mobile-p-text) + 4px);
+    font-weight: 600;
+    color: var(--red);
+}
+.signup-section > div > .tr-corner-v1 {
+    top: 0px;
+    right: -5px;
+}
+
+
+
+#login-submit-container:active {
+    opacity: .5;
+}
+
+#login-bar, #progress-bar-wrapper {
+    transition: opacity .3s ease;
+}

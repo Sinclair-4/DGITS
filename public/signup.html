@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGITS - SIGNUP</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./dest/signup.css">
+</head>
+<body>
+    <div class="dotted-bg"></div>
+    
+    <div id="main">
+
+        <div class="calling-text">
+            <div>
+                <p>Create new account</p>
+                <div class="tr-corner-v1"></div>
+                <div class="bl-corner-v1"></div>
+            </div>
+            <p>Join us today</p>
+        </div>
+        
+        <form id="signup-form">
+            <div class="action-text">
+                <p>SIGN UP</p>
+                <div class="tr-corner-v1"></div>
+            </div>
+
+            <div id="username-wrapper" class="input-wrapper">
+                <label for="username-input">
+                    <p>INPUT</p>
+                    <p>USERNAME</p>
+                </label>
+                <input type="text" id="username-input" name="username" placeholder="Enter username" required>
+                <div class="tl-corner-v1"></div>
+                <div class="tr-corner-v1"></div>
+                <div class="bl-corner-v1"></div>
+                <div class="br-corner-v1"></div>
+            </div>
+
+            <div id="email-wrapper" class="input-wrapper">
+                <label for="email-input">
+                    <p>INPUT</p>
+                    <p>EMAIL</p>
+                </label>
+                <input type="email" id="email-input" name="email" placeholder="Enter email" required>
+                <div class="tl-corner-v1"></div>
+                <div class="tr-corner-v1"></div>
+                <div class="bl-corner-v1"></div>
+                <div class="br-corner-v1"></div>
+            </div>
+
+            <div id="password-wrapper" class="input-wrapper">
+                <label for="password-input">
+                    <p>INPUT</p>
+                    <p>PASSWORD</p>
+                </label>
+                <input type="password" id="password-input" name="password" placeholder="Enter password" required>
+                <div class="tl-corner-v1"></div>
+                <div class="tr-corner-v1"></div>
+                <div class="bl-corner-v1"></div>
+                <div class="br-corner-v1"></div>
+            </div>
+
+            <div id="confirm-password-wrapper" class="input-wrapper">
+                <label for="confirm-password-input">
+                    <p>INPUT</p>
+                    <p>CONFIRM PASSWORD</p>
+                </label>
+                <input type="password"  id="confirm-password-input" name="confirmPassword" placeholder="Confirm your password" required>
+                <div class="tl-corner-v1"></div>
+                <div class="tr-corner-v1"></div>
+                <div class="bl-corner-v1"></div>
+                <div class="br-corner-v1"></div>
+            </div>
+
+            <p id="error-popup"></p>
+
+            <div id="submit-wrapper-container" class="submit-wrapper">
+                <div id="signup-bar" class="button-progress-bar">
+                    <button id="signup-submit-button" type="submit">SIGN UP</button>
+                </div>
+
+                <div>
+                    <div id="username-bar" class="item-progress-bar"></div>
+                    <div id="email-bar" class="item-progress-bar"></div>
+                    <div id="password-bar" class="item-progress-bar"></div>
+                    <div id="confirm-password-bar" class="item-progress-bar"></div>
+                </div>
+            </div>
+
+        </form>
+
+        
+        
+        <div class="login-section">
+            <p>Don't have an account?</p>
+            <div>
+                <p><a href="/login">Login</a></p>
+                <div class="br-corner-v1"></div>
+            </div>
+        </div>
+
+
+
+        <div id="successful-wrapper">
+            <div class="status-bar">
+                <p class="label-tag">SIGN UP</p>
+                <p class="status-msg">SUCCESSFUL</p>
+                <img src="./img/white-corner-arrow.png" alt="" class="arrow-icon">
+            </div>
+
+            <div class="welcome-card">
+                <div class="brand-section">
+                    <p class="brand-id">DGITS</p>
+                    <p class="welcome-msg">WELCOME ABOARD</p>
+                </div>
+                <div class="user-section">
+                    <p id="username">Sinclair</p>
+                    <div class="tl-corner-v1"></div>
+                    <div class="tr-corner-v1"></div>
+                    <div class="bl-corner-v1"></div>
+                    <div class="br-corner-v1"></div>
+                </div>
+            </div>
+
+            <a href="/login" id="login-button">
+                <div>
+                    LOGIN
+                    <div class="br-corner-v1"></div>
+                </div>
+            </a>
+        </div>
+    
+
+
+    </div>
+
+    <script type="module" src="./scripts/signup.js"></script>
+</body>
+</html>

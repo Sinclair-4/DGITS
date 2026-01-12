@@ -1,0 +1,62 @@
+:root {
+    --header-bg: var(--header-bg-dark);
+
+    --input-bg: var(--input-bg-dark);
+
+    --header-bg-dark: #393032;
+    --header-bg-light: rgb(57, 48, 50, .9);
+    /* --header-bg-light: rgb(15, 15, 15, .75); */
+
+    --input-bg-dark: #242121;
+    --input-bg-light: rgba(107, 98, 98, .1);
+    --input-bg-light: #d6d5d5;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+
+    height: auto;
+    min-height: 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    /* background-color: gray; */
+
+    color: var(--white);
+
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.input-wrapper label {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    font-size: var(--mobile-s-text);
+    background: var(--header-bg);
+}
+
+.input-wrapper label > p:first-child {
+    font-weight: 600;
+    background: var(--red);
+    padding: 0 10px;
+}
+
+.input-wrapper input {
+    height: 50px;
+    background: var(--input-bg);
+    border: none;
+    border-top: 1px solid var(--red);
+    color: var(--white);
+    padding-left: 10px;;
+}
+
+.input-wrapper input::placeholder {
+    color: var(--white);
+    opacity: .5;
+}
+
+.input-wrapper input:focus {
+    outline: none;
+}
